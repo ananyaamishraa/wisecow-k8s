@@ -37,7 +37,7 @@ jobs:
           version: v1.26.0
       - name: Load Docker image into KIND
         run: |
-          kind load docker-image ${{ secrets.DOCKER_USERNAME }}/wisecow:latest --name wisecow-cluster
+          kind load docker-image ${{ secrets.DOCKER_USERNAME }}/wisecow:latest --name wisecow
       - name: Apply Kubernetes manifests
         run: |
           kubectl apply -f k8s/deployment.yaml
