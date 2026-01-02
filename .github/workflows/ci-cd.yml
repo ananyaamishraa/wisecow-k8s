@@ -40,7 +40,7 @@ jobs:
           kind load docker-image ${{ secrets.DOCKER_USERNAME }}/wisecow:latest --name wisecow
       - name: Apply Kubernetes manifests
         run: |
-          kubectl apply -f k8s/deployment.yaml
-          kubectl apply -f k8s/service.yaml
+          kubectl apply -f k8s/deployment.yml
+          kubectl apply -f k8s/service.yml
 
 
